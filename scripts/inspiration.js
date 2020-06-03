@@ -137,7 +137,13 @@ async function runTestRoute (ctx, next) {
 
 	ctx.body = thisIsTheBody
 
+	howAboutThis()
+
 };
+
+function howAboutThis() {
+	console.log("did it work")
+}
 
 
 module.exports = runTestRoute;

@@ -35,11 +35,6 @@ const runTestRoute = require('./scripts/inspiration');
 router.get('/inspiration', runTestRoute);
 
 
-router.post('/admin/api/2020-04/graphql.json', (ctx, next) => {
-  console.log("This worked I think")
-})
-
-
   server.use(router.allowedMethods());
   server.use(router.routes());
 
