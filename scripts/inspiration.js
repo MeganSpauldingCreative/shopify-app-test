@@ -1,7 +1,5 @@
-const gql = require('graphql-tag');
-const check = require('@apollo/react-hooks');
-
-const hooks = new check();
+const gql = require('graphql-tag')
+const useMutation = require('@apollo/react-hooks')
 
 let thisIsTheBody = `
 <style>
@@ -119,6 +117,11 @@ let thisIsTheBody = `
                                         
 </div>
 
+<script>
+
+console.log({{customer.id}})
+</script>
+
 `
 
 let UPDATE_CUSTOMER_TAGS = `mutation {
@@ -132,13 +135,7 @@ let UPDATE_CUSTOMER_TAGS = `mutation {
 
 async function runTestRoute (ctx, next) {
 
-	
-
 	ctx.body = thisIsTheBody
-
-	graphQL
-
-	const {createScripts} = useMutation(UPDATE_CUSTOMER_TAGS)
 
 };
 
