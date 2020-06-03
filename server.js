@@ -30,6 +30,9 @@ const { SHOPIFY_API_SECRET_KEY, SHOPIFY_API_KEY, HOST, } = process.env;
 
 const router = new KoaRouter
 const server = new Koa();
+const runTestRoute = require('./scripts/inspiration');
+
+router.get('/inspiration', runTestRoute);
 
 
 router.post('/admin/api/2020-04/graphql.json', (ctx, next) => {
